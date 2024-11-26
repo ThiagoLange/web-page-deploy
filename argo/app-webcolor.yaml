@@ -3,12 +3,19 @@ kind: Application
 metadata:
   name: webcolor
   namespace: argocd
+  labels:
+    curso: gitops
 spec:
   project: default
   source:
     repoURL: https://github.com/ThiagoLange/web-page-deploy.git
     path: k8s
     targetRevision: HEAD
+    directory:
+      recurse: true
   destination:
     namespace: webcolor
     server: https://kubernetes.default.svc
+  info:
+    - name: Projeto
+      value: "Curso de GitOps"
