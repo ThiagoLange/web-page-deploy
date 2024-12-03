@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: webcolor
+  name: webcolor1
   namespace: argocd
   labels:
     curso: gitops
